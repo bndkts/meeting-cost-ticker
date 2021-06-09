@@ -84,7 +84,6 @@ h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
@@ -197,6 +196,10 @@ form button {
   font-size: 2rem;
   border: none;
   background: white;
+}
+
+form {
+  margin: 2rem;
 }
 
 input::placeholder {
