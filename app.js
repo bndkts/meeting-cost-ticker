@@ -17,7 +17,7 @@ inputCost.onkeyup = function () {
 
 inputParticipants.onkeyup = function () {
   document.getElementById("participants-output").innerHTML =
-    inputParticipants.value + "€";
+    inputParticipants.value;
   participants = inputParticipants.value;
 };
 
