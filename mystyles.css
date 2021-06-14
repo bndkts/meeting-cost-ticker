@@ -26,13 +26,19 @@ section {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: #26547c;
   text-align: center;
 }
 
 h1 {
   font-size: 48px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
   font-weight: 600;
 }
 
