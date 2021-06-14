@@ -11,7 +11,7 @@ const btns = document.querySelectorAll(".btn");
 const submit = document.querySelector(".submit");
 
 inputCost.onkeyup = function () {
-  document.getElementById("cost-output").innerHTML = inputCost.value + "€";
+  document.getElementById("cost-output").innerHTML = inputCost.value;
   cost = inputCost.value;
 };
 
@@ -25,6 +25,7 @@ btns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     const styles = e.currentTarget.classList;
     if (styles.contains("start")) {
+      window.clearInterval(counter);
       counter = window.setInterval(function () {
         let totalCosts = (parseInt(cost) * parseInt(participants)) / 3600;
         count += totalCosts;
@@ -34,6 +35,8 @@ btns.forEach(function (btn) {
       window.clearInterval(counter);
       count = 0;
       value.textContent = count + "€";
+    } else if (styles.contains("stop")) {
+      window.clearInterval(counter);
     }
   });
 });

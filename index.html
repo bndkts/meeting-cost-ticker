@@ -6,29 +6,44 @@
     <title>Meeting Cost Calculator</title>
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mystyles.css" />
   </head>
   <body>
     <main>
-      <div class="container">
-        
-      </div>
-      <div class="container">
-        <h1>
-          Meeting Cost Calculator
-        </h1>
-        <form id="form">
-        <input type="number" id="cost" placeholder="Hourly rate per participant">
-        <input type="number" id="participants" placeholder="Number of participants">
-        </form>
-        <h2>Hourly rate per participant: <span id="cost-output"></span></h2>
-        <h2>Number of participants: <span id="participants-output"></span></h2>
-        <span id="value">0</span> 
-        <div class="button-container">
-          <button class="btn start">Start</button>
-          <button class="btn reset">Reset</button>
+      <section>
+        <div class="container"></div>
+        <div class="container">
+          <h1>Meeting Cost Ticker</h1>
+          <form id="form">
+            <input
+              type="number"
+              id="cost"
+              placeholder="Hourly rate per participant"
+              class="form-control"
+            />
+            <input
+              type="number"
+              id="participants"
+              placeholder="Number of participants"
+              class="form-control"
+            />
+          </form>
+          <div class="info">
+            <p>Hourly rate per participant: <span id="cost-output">-</span>€</p>
+            <p>
+              Number of participants: <span id="participants-output">-</span>
+            </p>
+          </div>
+          <div class="highlight">
+            <p>Cost: <span id="value">0</span></p>
+          </div>
+          <div class="button-section">
+            <button class="btn btn-primary start">Start Ticker</button>
+            <button class="btn btn-signal stop">Stop</button>
+            <button class="btn btn-red reset">Reset</button>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <!-- javascript -->
     <script src="app.js"></script>
