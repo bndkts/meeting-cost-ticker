@@ -31,20 +31,26 @@
           <h1>Meeting Cost Ticker</h1>
           <p>Calculate how much your current meeting will cost you or your client in realtime.</p>
           <form id="form">
+            <div class="form-field">
+            <label for="cost">Hourly rate:</label>
             <input
               type="number"
               id="cost"
-              placeholder="Hourly rate per participant"
+              placeholder="Enter the hourly rate per participant in €"
               class="form-control"
             />
+            </div>
+            <div class="form-field">
+            <label for="participants">Meeting participants:</label>
             <input
               type="number"
               id="participants"
-              placeholder="Number of participants"
+              placeholder="Enter the number of participants"
               class="form-control"
             />
+            </div>
           </form>
-          <div class="info">
+          <div class="info" id="show-info" style="display:none ;">
             <p>Hourly rate per participant: <span id="cost-output">-</span>€</p>
             <p>
               Number of participants: <span id="participants-output">-</span>

@@ -9,6 +9,8 @@ let participants = 0;
 const value = document.getElementById("value");
 const btns = document.querySelectorAll(".btn");
 const submit = document.querySelector(".submit");
+const form = document.getElementById("form");
+const show_info = document.getElementById("show-info");
 
 inputCost.onkeyup = function () {
   document.getElementById("cost-output").innerHTML = inputCost.value;
@@ -31,10 +33,14 @@ btns.forEach(function (btn) {
         count += totalCosts;
         value.textContent = count.toFixed(2) + "€";
       }, 1000);
+      form.style.display = "none";
+      show_info.style.display = "block";
     } else if (styles.contains("reset")) {
       window.clearInterval(counter);
       count = 0;
       value.textContent = count + "€";
+      form.style.display = "block";
+      show_info.style.display = "none";
     } else if (styles.contains("stop")) {
       window.clearInterval(counter);
     }
