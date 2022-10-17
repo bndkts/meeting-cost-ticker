@@ -13,6 +13,15 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="mystyles.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1QDJMXBWL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-C1QDJMXBWL');
+    </script>
   </head>
   <body>
     <main>
@@ -20,6 +29,7 @@
         <div class="container"></div>
         <div class="container">
           <h1>Meeting Cost Ticker</h1>
+          <p>Calculate how much your current meeting will cost you or your client in realtime.</p>
           <form id="form">
             <input
               type="number"
@@ -52,13 +62,6 @@
       </section>
       <section>
         <h2>What you neet to now about this meeting cost calculator</h2>
-        <h3>Why should I use the meeting cost calculator?</h3>
-        <p>
-          Either because you are an agency/consultancy and want to know how much
-          you are currently earning in this meeting. Or because you want to
-          calculate how much the current meeting is costing your business. Or you are stuck in an unproductive meeting right now and want to put a price tag on this waste of your time. Have fun!
-        </p>
-        <p>Fun fact: Did you know the average cost of a meeting in the United States is USD 650?</p>
         <h3>How does the meeting cost calculator work?</h3>
         <p>
           <ol>
@@ -79,9 +82,28 @@
           If you want the calculator to stop counting just press stop or click
           reset to set the count of this meeting back to zero.
         </p>
+        <h3>Why should I use the meeting cost calculator?</h3>
+        <p>
+          Either because you are an agency/consultancy and want to know how much
+          you are currently earning in this meeting. Or because you want to
+          calculate how much the current meeting is costing your business. Or you are stuck in an unproductive meeting right now and want to put a price tag on this waste of your time. Have fun!
+        </p>
+        <p>Fun fact: Did you know the average cost of a meeting in the United States is USD 650?</p>
+        <p>You want to learn more about why you should track your meeting duration and costs? Here is a great article about your <a href="https://hbr.org/2014/05/your-scarcest-resource">scarcest resource.</a></p>
+        <h3>What is the "hourly rate per participant" for my meeting?</h3>
+        <p>This is the average rate of every participant of this meeting. For external persons who charge you per hour this rate is faily easy to calculate. Just take the average of the price they charge you. For internal personal it gets a bit more tricky. You need to calculate the internal rate of the persons in the meeting. You can calculate this rate if you take the monthly costs (salary + social insurance, bonus payments etc.) and divide it through the average hours this person works per month.</p>
+        <div class="spacer"></div>
+        <p class="center"><a href="imprint_privacy.html">Imprint & Privacy </a></p>
       </section>
     </main>
+    <div id="footer-cookie">
+    <span id="description">
+     We use cookies to provide and improve our services. By clicking on "Accept" you accept cookies. <a href="imprint_privacy.html">Privacy Policy</a>
+    </span>
+    <span id="accept"><a href="javascript:void(0)" title="Akzeptieren">Accept</a></span>
+  </div>
     <!-- javascript -->
     <script src="app.js"></script>
+    <script src="cookies.js"></script>
   </body>
 </html>
