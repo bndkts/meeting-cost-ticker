@@ -13,15 +13,7 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="mystyles.css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1QDJMXBWL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-C1QDJMXBWL');
-    </script>
+    
   </head>
   <body>
     <main>
@@ -50,24 +42,24 @@
             />
             </div>
           </form>
-          <div class="info" id="show-info" style="display:none ;">
+          <div class="info hide" id="show-info">
             <p>Hourly rate per participant: <span id="cost-output">-</span>€</p>
             <p>
               Number of participants: <span id="participants-output">-</span> <button onclick="raise()" class="btn p-raise">⬆️🧑‍💼</button> <button onclick="reduce()" class="btn p-reduce">⬇️🧑‍💼</button>
             </p>
-          </div>
-          <div class="highlight">
+            <div class="highlight">
             <p>Cost: <span id="value">0</span></p>
           </div>
+          </div>
           <div class="button-section">
-            <button onclick="startCount()" class="btn btn-primary start">Start Ticker</button>
+            <button onclick="startCount()" class="btn btn-primary start animate__backInLeft">Start Ticker</button>
             <button onclick="stopCount()" class="btn btn-signal stop">Stop</button>
             <button onclick="resetCount()" class="btn btn-red reset">Reset</button>
           </div>
         </div>
       </section>
       <section>
-        <h2>What you neet to now about this meeting cost calculator</h2>
+        <h2>What you need to now about this meeting cost calculator</h2>
         <h3>How does the meeting cost calculator work?</h3>
         <p>
           <ol>
@@ -102,14 +94,7 @@
         <p class="center"><a href="imprint_privacy.html">Imprint & Privacy </a></p>
       </section>
     </main>
-    <div id="footer-cookie">
-    <span id="description">
-     We use cookies to provide and improve our services. By clicking on "Accept" you accept cookies. <a href="imprint_privacy.html">Privacy Policy</a>
-    </span>
-    <span id="accept"><a href="javascript:void(0)" title="Akzeptieren">Accept</a></span>
-  </div>
     <!-- javascript -->
     <script src="app.js"></script>
-    <script src="cookies.js"></script>
   </body>
 </html>

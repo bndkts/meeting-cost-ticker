@@ -138,6 +138,7 @@ h2 {
   font-weight: 600;
   text-align: center;
   border-radius: 10px;
+  padding: auto;
 }
 
 .spacer {
@@ -145,6 +146,7 @@ h2 {
 }
 
 .button-section {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,5 +160,19 @@ h2 {
 
 .form-field {
   margin-top: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.scale-in-bottom {
+  display: block;
+  -webkit-animation: scale-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=mystyles.css.map */

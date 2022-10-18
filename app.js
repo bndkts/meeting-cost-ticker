@@ -31,8 +31,8 @@ function startCount() {
   window.clearInterval(counter);
   countCost();
 
-  form.style.display = "none";
-  show_info.style.display = "block";
+  form.classList.add("hide");
+  show_info.classList.remove("hide");
 }
 
 function stopCount() {
@@ -44,8 +44,8 @@ function resetCount() {
   count = 0;
   value.textContent = count + "€";
 
-        form.style.display = "block";
-        show_info.style.display = "none";
+        form.classList.remove("hide");
+        show_info.classList.add("hide");
 }
 
 function raise() {
