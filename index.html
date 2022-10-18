@@ -53,16 +53,16 @@
           <div class="info" id="show-info" style="display:none ;">
             <p>Hourly rate per participant: <span id="cost-output">-</span>€</p>
             <p>
-              Number of participants: <span id="participants-output">-</span>
+              Number of participants: <span id="participants-output">-</span> <button onclick="raise()" class="btn p-raise">⬆️🧑‍💼</button> <button onclick="reduce()" class="btn p-reduce">⬇️🧑‍💼</button>
             </p>
           </div>
           <div class="highlight">
             <p>Cost: <span id="value">0</span></p>
           </div>
           <div class="button-section">
-            <button class="btn btn-primary start">Start Ticker</button>
-            <button class="btn btn-signal stop">Stop</button>
-            <button class="btn btn-red reset">Reset</button>
+            <button onclick="startCount()" class="btn btn-primary start">Start Ticker</button>
+            <button onclick="stopCount()" class="btn btn-signal stop">Stop</button>
+            <button onclick="resetCount()" class="btn btn-red reset">Reset</button>
           </div>
         </div>
       </section>
