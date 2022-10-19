@@ -13,7 +13,6 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="mystyles.css" />
-    
   </head>
   <body>
     <main>
@@ -21,80 +20,121 @@
         <div class="container"></div>
         <div class="container">
           <h1>Meeting Cost Ticker</h1>
-          <p>Calculate how much your current meeting will cost you or your client in realtime.</p>
+          <p>
+            Calculate how much your current meeting will cost you or your client
+            in realtime.
+          </p>
           <form id="form">
             <div class="form-field">
-            <label for="cost">Hourly rate:</label>
-            <input
-              type="number"
-              id="cost"
-              placeholder="Enter the hourly rate per participant in €"
-              class="form-control"
-            />
+              <label for="cost">Hourly rate:</label>
+              <input
+                type="number"
+                id="cost"
+                placeholder="Enter the hourly rate per participant"
+                class="form-control"
+              /><select id="currency" name="currency" class="form-control">
+                <option value="€">€</option>
+                <option value="$">$</option>
+                <option value="£">£</option>
+              </select>
             </div>
             <div class="form-field">
-            <label for="participants">Meeting participants:</label>
-            <input
-              type="number"
-              id="participants"
-              placeholder="Enter the number of participants"
-              class="form-control"
-            />
+              <label for="participants">Meeting participants:</label>
+              <input
+                type="number"
+                id="participants"
+                placeholder="Enter the number of participants"
+                class="form-control"
+              />
             </div>
           </form>
           <div class="info hide" id="show-info">
-            <p>Hourly rate per participant: <span id="cost-output">-</span>€</p>
+            <p>Hourly rate per participant: <span id="cost-output">-</span></p>
             <p>
-              Number of participants: <span id="participants-output">-</span> <button onclick="raise()" class="btn p-raise">⬆️🧑‍💼</button> <button onclick="reduce()" class="btn p-reduce">⬇️🧑‍💼</button>
+              Number of participants: <span id="participants-output">-</span>
+              <button onclick="raise()" class="btn p-raise">⬆️🧑‍💼</button>
+              <button onclick="reduce()" class="btn p-reduce">⬇️🧑‍💼</button>
             </p>
             <div class="highlight">
-            <p>Cost: <span id="value">0</span></p>
-          </div>
+              <p>Cost: <span id="value">0</span></p>
+            </div>
           </div>
           <div class="button-section">
-            <button onclick="startCount()" class="btn btn-primary start animate__backInLeft">Start Ticker</button>
-            <button onclick="stopCount()" class="btn btn-signal stop">Stop</button>
-            <button onclick="resetCount()" class="btn btn-red reset">Reset</button>
+            <button
+              onclick="startCount()"
+              class="btn btn-primary start animate__backInLeft"
+            >
+              Start Ticker
+            </button>
+            <button onclick="stopCount()" class="btn btn-signal stop">
+              Stop
+            </button>
+            <button onclick="resetCount()" class="btn btn-red reset">
+              Reset
+            </button>
           </div>
         </div>
       </section>
       <section>
         <h2>What you need to now about this meeting cost calculator</h2>
+
         <h3>How does the meeting cost calculator work?</h3>
-        <p>
-          <ol>
-            <li>
-              Enter your hourly rate or the avergare rate of all participants of
-              the meeting
-            </li>
-            <li>
-              Enter the number of the participants of this meeting
-            </li>
-            <li>
-              Click start and the calculator will count the cost of this meeting
-              in realtime
-            </li>
-          </ol>
-        </p>
+
+        <ol>
+          <li>
+            Enter your hourly rate or the avergare rate of all participants of
+            the meeting
+          </li>
+          <li>Enter the number of the participants of this meeting</li>
+          <li>
+            Click start and the calculator will count the cost of this meeting
+            in realtime
+          </li>
+        </ol>
+
         <p>
           If you want the calculator to stop counting just press stop or click
           reset to set the count of this meeting back to zero.
         </p>
+
         <h3>Why should I use the meeting cost calculator?</h3>
         <p>
           Either because you are an agency/consultancy and want to know how much
           you are currently earning in this meeting. Or because you want to
-          calculate how much the current meeting is costing your business. Or you are stuck in an unproductive meeting right now and want to put a price tag on this waste of your time. Have fun!
+          calculate how much the current meeting is costing your business. Or
+          you are stuck in an unproductive meeting right now and want to put a
+          price tag on this waste of your time. Have fun!
         </p>
-        <p>Fun fact: Did you know the average cost of a meeting in the United States is USD 650?</p>
-        <p>You want to learn more about why you should track your meeting duration and costs? Here is a great article about your <a href="https://hbr.org/2014/05/your-scarcest-resource">scarcest resource.</a></p>
+        <p>
+          Fun fact: Did you know the average cost of a meeting in the United
+          States is USD 650?
+        </p>
+        <p>
+          You want to learn more about why you should track your meeting
+          duration and costs? Here is a great article about your
+          <a href="https://hbr.org/2014/05/your-scarcest-resource"
+            >scarcest resource.</a
+          >
+        </p>
         <h3>What is the "hourly rate per participant" for my meeting?</h3>
-        <p>This is the average rate of every participant of this meeting. For external persons who charge you per hour this rate is faily easy to calculate. Just take the average of the price they charge you. For internal personal it gets a bit more tricky. You need to calculate the internal rate of the persons in the meeting. You can calculate this rate if you take the monthly costs (salary + social insurance, bonus payments etc.) and divide it through the average hours this person works per month.</p>
+        <p>
+          This is the average rate of every participant of this meeting. For
+          external persons who charge you per hour this rate is faily easy to
+          calculate. Just take the average of the price they charge you. For
+          internal personal it gets a bit more tricky. You need to calculate the
+          internal rate of the persons in the meeting. You can calculate this
+          rate if you take the monthly costs (salary + social insurance, bonus
+          payments etc.) and divide it through the average hours this person
+          works per month.
+        </p>
         <div class="spacer"></div>
-        <p class="center"><a href="imprint_privacy.html">Imprint & Privacy </a></p>
+        <p class="center">
+          <a href="imprint_privacy.html">Imprint & Privacy </a>
+        </p>
       </section>
     </main>
     <!-- javascript -->
     <script src="app.js"></script>
+    <script src="helper.js"></script>
   </body>
 </html>

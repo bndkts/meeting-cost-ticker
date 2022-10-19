@@ -1,18 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 
-$primary: #26547c;
-$cta: #00c993;
-$signal: #fdae53;
-$red: #ef476f;
-$light: #fffcf9;
+$primary: #021617;
+$cta: #119DA4;
+$signal: #FBAF01;
+$red: #FF5714;
+$light: #ffff;
 
 @mixin background {
-  background-color: $light;
-  opacity: 1;
-  background-image: radial-gradient($primary 1.85px, transparent 1.85px),
-    radial-gradient($primary 1.85px, #f9f9ff 1.85px);
-  background-size: 74px 74px;
-  background-position: 0 0, 37px 37px;
+  /// background-color: $light;
+  /// opacity: 1;
+  /// background-image: url("damir-kopezhanov-luseu9GtYzM-unsplash.jpg");
+  /// height: 500px;
+    /* You must set a specified height */
+    /// background-position: center;
+    /* Center the image */
+    /// background-repeat: no-repeat;
+    /* Do not repeat the image */
+    /// background-size: cover;
+    /* Resize the background image to cover the entire container */
+  ///background-image: radial-gradient($primary 1.85px, transparent 1.85px),
+  ///  radial-gradient($primary 1.85px, #f9f9ff 1.85px);
+  ///background-size: 74px 74px;
+  ///background-position: 0 0, 37px 37px;
+  background-color: $cta;
+background-image: linear-gradient(32deg, #ff5714 0%, #e2e2e2 50%, #119da4 100%);
+
+  
 }
 
 html {
@@ -25,7 +38,7 @@ section {
   margin: auto;
   margin-top: 70px;
   margin-bottom: 70px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 50px;
   color: rgb(32, 32, 32);
   border-radius: 10px;
@@ -133,12 +146,13 @@ h2 {
   font-size: 48px;
   font-weight: 600;
   color: $light;
-  background-color: $primary;
   border-color: $primary;
   font-weight: 600;
   text-align: center;
   border-radius: 10px;
   padding: auto;
+  background-color: #ff5714;
+    background-image: linear-gradient(225deg, #ff5714 0%, #119da4 100%);
 }
 
 .spacer {
@@ -169,4 +183,3 @@ h2 {
 .hide {
   display: none;
 }
-
